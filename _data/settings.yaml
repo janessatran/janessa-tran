@@ -11,12 +11,12 @@ config:
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 metadata:
   site_url: 'https://astonishing-nougat-b74073.netlify.app'
-  site_title: Janessa Tran
-  site_subtitle_1: Creative Software Engineer
-  site_subtitle_2: Southern California
+  site_title: janessa tran
+  site_subtitle_1: software engineer
+  site_subtitle_2: mountains of southern ca
   site_description: >
-    Software Engineer, Creative. Currently building applications and tools at
-    Adobe.
+    hi, i'm janessa. i love to learn, create, play, move, be still. i am
+    currently building things as a software engineer at Adobe.
   site_email: ''
   site_social_url: 'https://github.com/janessatran'
   site_icon_svg: /assets/uploads/favicon.svg
