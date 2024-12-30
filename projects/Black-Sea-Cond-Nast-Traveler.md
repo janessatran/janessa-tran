@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: 'Black Sea, Condé Nast Traveler'
 description: |
   Photoshoot for the luxury travel publication, Condé Nast Traveler.
