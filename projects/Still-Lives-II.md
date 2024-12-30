@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: Still Lives II
 description: >
   A flower study taken for a special exhibition at the Soeur flagship store in
@@ -12,6 +12,7 @@ images:
     caption: A flower close up
 date: 2023-11-13T08:24:31.507Z
 ---
+
 An additional fictitious project description.
 
 All images used in this demo are sourced from [Unsplash](https://unsplash.com/).
