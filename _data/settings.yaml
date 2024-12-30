@@ -32,9 +32,9 @@ theme:
   theme_layout:
     space_scale: 100
   theme_colors:
-    background: '#ffffff'
-    text: '#101010'
-    link: '#542BFF'
+    background: '#E4E9E2'
+    text: '#1F5138'
+    link: '#D14B4D'
     background_dark: '#101010'
     text_dark: '#E1E1E1'
     link_dark: '#FFFFFF'
