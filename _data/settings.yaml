@@ -10,13 +10,13 @@ config:
     Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", Arial, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"
 metadata:
-  site_url: 'https://halide.netlify.app'
+  site_url: 'https://astonishing-nougat-b74073.netlify.app'
   site_title: Janessa Tran
   site_subtitle_1: Creative Software Engineer
   site_subtitle_2: Southern California
   site_description: >
     Software Engineer, Creative. Currently building applications and tools at
-    Adobe. 
+    Adobe.
   site_email: ''
   site_social_url: 'https://github.com/janessatran'
   site_icon_svg: /assets/uploads/favicon.svg
