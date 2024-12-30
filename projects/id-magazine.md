@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: iD Magazine
 description: |
   Editorial shoot for iD magazine done in London during lockdown.
@@ -13,6 +13,7 @@ images:
     caption: Motorway tunnel
 date: 2023-11-14T12:26:42.925Z
 ---
+
 An additional fictitious project description.
 
 All images used in this demo are sourced from [Unsplash](https://unsplash.com/).
