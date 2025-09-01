@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: 'ducks, not in a row'
 description: |
   digital illustration
