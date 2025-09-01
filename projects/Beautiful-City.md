@@ -1,5 +1,5 @@
 ---
-draft: true
+draft: false
 title: 'Oh, to be a duck'
 description: |
   A digital illustration capturing the whimsical life of ducks
