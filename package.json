@@ -38,5 +38,8 @@
     "netlify-plugin-csp-generator": "^1.6.1",
     "tinacms": "^2.2.0",
     "uglify-js": "^3.19.2"
+  },
+  "dependencies": {
+    "eleventy": "^1.0.7"
   }
 }
