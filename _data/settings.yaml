@@ -21,6 +21,7 @@ metadata:
   site_social_url: "https://github.com/janessatran"
   site_linkedin_url: "https://www.linkedin.com/in/janessatran"
   site_instagram_url: "https://www.instagram.com/byjanessa/"
+  site_about_url: "/about"
   site_icon_svg: /assets/uploads/favicon.svg
   site_icon_png: ""
   site_ga4_id: ""
@@ -65,3 +66,4 @@ i18n:
   site_social_title: GitHub
   site_linkedin_title: LinkedIn
   site_instagram_title: Instagram
+  site_about_title: about me

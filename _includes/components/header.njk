@@ -11,13 +11,14 @@
       {% endif %}
 		</a>
 
-		{% if settings.metadata.site_subtitle_1 %}
-			<span class="grid__item">{{ settings.metadata.site_subtitle_1 }}</span>
-		{% endif %}
-
 		{% if settings.metadata.site_subtitle_2 %}
 			<span class="grid__item">{{ settings.metadata.site_subtitle_2 }}</span>
 		{% endif %}
+
+		<span class="grid__item">
+			<a href="{{ settings.metadata.site_about_url }}" target="" rel="noopener">{{ settings.i18n.site_about_title }}</a>
+		</span>
+
 
 		{% if settings.theme.theme_features.enable_dark_mode %}
 
