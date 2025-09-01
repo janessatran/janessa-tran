@@ -1,9 +1,9 @@
 ---
 draft: true
-title: 'Black Sea, Condé Nast Traveler'
+title: wild horses
 description: |
-  Photoshoot for the luxury travel publication, Condé Nast Traveler.
-year: 2023
+  wild horses, digital
+year: 2025
 images:
   - src: /assets/uploads/IMG_0375.png
     caption: wild horses
@@ -11,6 +11,3 @@ date: 2023-11-14T10:26:09.471Z
 position: 3
 ---
 
-An additional fictitious project description.
-
-All images used in this demo are sourced from [Unsplash](https://unsplash.com/).
