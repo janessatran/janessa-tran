@@ -6,10 +6,8 @@ description: >
   at the Centre Pompidou
 year: 2022
 images:
-  - src: /assets/uploads/photo-1695394979617-f43bbf569deb.avif
-    caption: a caption
-  - src: /assets/uploads/photo-1699213880412-01eddb3023ee.avif
-    caption: jkkhkjhm
+  - src: /assets/uploads/IMG_0202.png
+    caption: '"oh to be a duck" illustration, digital'
 date: 2023-11-10T12:28:51.623Z
 position: 4
 ---
