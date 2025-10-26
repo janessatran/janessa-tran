@@ -1,0 +1,141 @@
+---
+layout: layouts/base.njk
+section: posts
+permalink: "/posts/index.html"
+title: "Posts"
+---
+
+<article>
+
+  <header class="pb--4">
+
+    <div class="post-title-container">
+
+      <h1 class="post-title">Posts</h1>
+      <div class="post-subtitle-label">
+        <p>Thoughts, learnings, and reflections on software engineering, technology, and life.</p>
+      </div>
+
+    </div>
+
+  </header>
+
+  <section class="post-list-section">
+    <div class="grid__item--span-4 mw--readable">
+      
+      {% if collections.posts %}
+        <ul class="post-list">
+          {% for post in collections.posts %}
+            <li class="post-item">
+              <h3><a href="{{ post.url }}">{{ post.data.title }}</a></h3>
+              <p class="post-meta">
+                <time datetime="{{ post.date }}">
+                  {{ post.date }}
+                </time>
+                {% if post.data.tags %}
+                  {% for tag in post.data.tags %}
+                    {% if tag != "posts" %}
+                      <span class="tag">{{ tag }}</span>
+                    {% endif %}
+                  {% endfor %}
+                {% endif %}
+              </p>
+              {% if post.data.description %}
+                <p class="post-excerpt">{{ post.data.description }}</p>
+              {% endif %}
+            </li>
+          {% endfor %}
+        </ul>
+      {% else %}
+        <p>No posts yet. Check back soon!</p>
+      {% endif %}
+
+    </div>
+  </section>
+  
+</article>
+
+<style>
+.post-date {
+  font-size: smaller;
+  font-weight: normal;
+}
+
+.post-tags {
+  font-size: smaller;
+}
+
+.post-list {
+  list-style: none;
+  padding: 0;
+}
+
+.post-item {
+  margin-bottom: 2rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--color-text);
+}
+
+.post-item:last-child {
+  border-bottom: none;
+}
+
+.post-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.post-item h3 a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+.post-item h3 a:hover {
+  color: var(--color-link);
+}
+
+.post-meta {
+  font-size: 0.9rem;
+  color: var(--color-text);
+  opacity: 0.7;
+  margin-bottom: 0.5rem;
+}
+
+.tag {
+  background: var(--color-link);
+  color: var(--color-background);
+  padding: 0.2rem 0.5rem;
+  border-radius: 0.25rem;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+
+.post-excerpt {
+  color: var(--color-text);
+  opacity: 0.8;
+  font-style: italic;
+}
+
+.post-list-section {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 2rem;
+}
+
+.post-title-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.post-title {
+  font-size: larger;
+  font-weight: 800;
+}
+
+.post-subtitle-label {
+  text-align: center;
+  max-width: 500px;
+}
+</style>

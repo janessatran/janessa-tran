@@ -5,8 +5,8 @@ section: about
 <article>
 
   <header class="pb--4">
-    <div>
-      <h1>{{ title }}</h1>
+    <div class="about-title-container">
+      <h1 class="about-title">{{ title }}</h1>
     </div>
   </header>
 
@@ -17,6 +17,21 @@ section: about
   </section>
 
 </article>
+
+<style>
+  .about-title-container {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .about-title {
+    font-size: larger;
+    font-weight: 800;
+  }
+</style>
 
 {# Gets appended to <head> during build #}
 {# {% include "components/opengraph.njk" %} #}

@@ -1,0 +1,244 @@
+---
+layout: layouts/base.njk
+permalink: "posts/{{ title | slug }}/index.html"
+section: post
+---
+<article>
+
+  <header class="pb--4">
+
+    <div class="post-title-container">
+
+      <h1 class="post-title">{{ title }}</h1>
+      
+      {% if date %}
+        <p class="post-date-label">
+          {{ date }}
+        </p>
+      {% endif %}
+
+    </div>
+
+  </header>
+
+  <section class="post-section">
+    <div class="post-content">
+      {{ layoutContent | safe }}
+    </div>
+  </section>
+
+  <!-- Post Navigation -->
+  <nav class="post-navigation">
+    {% set allPosts = collections.posts %}
+    {% set currentIndex = -1 %}
+    {% for post in allPosts %}
+      {% if post.url == page.url %}
+        {% set currentIndex = loop.index0 %}
+      {% endif %}
+    {% endfor %}
+    
+    {% if currentIndex > 0 %}
+      {% set prevPost = allPosts[currentIndex - 1] %}
+      <div class="nav-item nav-prev">
+        <a href="{{ prevPost.url }}" class="nav-link">
+          <span class="nav-label">← Previous</span>
+          <span class="nav-title">{{ prevPost.data.title }}</span>
+        </a>
+      </div>
+    {% endif %}
+    
+    {% if currentIndex < allPosts.length - 1 %}
+      {% set nextPost = allPosts[currentIndex + 1] %}
+      <div class="nav-item nav-next">
+        <a href="{{ nextPost.url }}" class="nav-link">
+          <span class="nav-label">Next →</span>
+          <span class="nav-title">{{ nextPost.data.title }}</span>
+        </a>
+      </div>
+    {% endif %}
+  </nav>
+
+  <!-- Prism.js for syntax highlighting -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism.min.css" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/themes/prism-tomorrow.min.css" rel="stylesheet" media="(prefers-color-scheme: dark)" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/components/prism-core.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/prism/1.29.0/plugins/autoloader/prism-autoloader.min.js"></script>
+
+  <style>
+    .post-title-container {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .post-title {
+      font-size: larger;
+      font-weight: 800;
+    }
+
+    .post-date-label {
+      font-size: smaller;
+    }
+
+    .post-section {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 2rem;
+    }
+    
+    .post-content {
+      max-width: 600px;
+      width: 100%;
+    }
+    
+    /* Code block styling */
+    .post-content pre {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.9rem;
+      line-height: 1.5;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-content code {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 4px;
+      padding: 0.2rem 0.4rem;
+      font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+      font-size: 0.85rem;
+      color: #d63384;
+    }
+    
+    .post-content pre code {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      color: #2d3748;
+      font-size: inherit;
+    }
+    
+    /* Prism.js overrides for better integration */
+    .post-content pre[class*="language-"] {
+      background-color: #f8f9fa;
+      border: 1px solid #e9ecef;
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+      overflow-x: auto;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+    
+    .post-content code[class*="language-"] {
+      background-color: transparent;
+      border: none;
+      padding: 0;
+      font-size: inherit;
+    }
+    
+    /* Post Navigation Styling */
+    .post-navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid #e9ecef;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    
+    .nav-item {
+      flex: 1;
+      max-width: 45%;
+    }
+    
+    .nav-next {
+      text-align: right;
+    }
+    
+    .nav-link {
+      display: block;
+      text-decoration: none;
+      color: var(--color-text);
+      padding: 1rem;
+      border-radius: 8px;
+      transition: background-color 0.2s ease;
+    }
+    
+    .nav-link:hover {
+      background-color: #f8f9fa;
+    }
+    
+    .nav-label {
+      display: block;
+      font-size: 0.85rem;
+      color: var(--color-link);
+      font-weight: 600;
+      margin-bottom: 0.25rem;
+    }
+    
+    .nav-title {
+      display: block;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: var(--color-text);
+    }
+    
+    /* Responsive navigation */
+    @media (max-width: 768px) {
+      .post-navigation {
+        flex-direction: column;
+        gap: 1rem;
+      }
+      
+      .nav-item {
+        max-width: 100%;
+      }
+      
+      .nav-next {
+        text-align: left;
+      }
+    }
+    
+    /* Dark mode support */
+    @media (prefers-color-scheme: dark) {
+      .post-content pre {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        color: #e2e8f0;
+      }
+      
+      .post-content code {
+        background-color: #2d3748;
+        border-color: #4a5568;
+        color: #f687b3;
+      }
+      
+      .post-content pre code {
+        color: #e2e8f0;
+      }
+      
+      .post-content pre[class*="language-"] {
+        background-color: #2d3748;
+        border-color: #4a5568;
+      }
+      
+      .post-navigation {
+        border-top-color: #4a5568;
+      }
+      
+      .nav-link:hover {
+        background-color: #2d3748;
+      }
+    }
+  </style>
+  
+</article>
